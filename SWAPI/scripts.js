@@ -43,7 +43,7 @@ async function logPeople() {
         return;
     }
 
-    const url = "https://www.swapi.tech/api/people/?name=" + characterName;
+    const url = "https://www.swapi.tech/api/people/?name=" + encodeURIComponent(characterName);
     try {       
         const response = await fetch(url);
         if (!response.ok) throw new Error("Network error: " + response.statusText);
@@ -85,7 +85,7 @@ async function autoCompleteSuggestion() {
         return;
     }
 
-    const url = "https://www.swapi.tech/api/people/?name=" + characterName;
+    const url = "https://www.swapi.tech/api/people/?name=" + encodeURIComponent(characterName);
 
     try {
         const response = await fetch(url);
