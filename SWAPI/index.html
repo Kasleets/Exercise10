@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API - SWAPI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<main>
+
+<h1>Star Wars characters API</h1>
+
+
+<div class="input-container">
+    <label for="element">Find details about your favorite Star Wars characters! <br>Input your desired character name:</label>
+        <div class="separate">
+        <input type="text" id="element" oninput="autoCompleteSuggestion()">
+        </div>
+    <ul id="suggestionList"></ul>
+</div>
+<button id="generateBtn1">Generate properties of the character</button>
+
+
+
+<h2>Results:</h2>
+<textarea rows="8" id="output"></textarea> 
+<div id="loading" style="display:none;">Fetching the requested data from API, please wait...</div>
+
+
+</main>
+
+<footer>
+    <p>&copy; 2023 Kasleet. </p>
+    <p>All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
